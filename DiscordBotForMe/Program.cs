@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
+using Autofac;
 using DiscordBotForMe.Discordio;
 using DiscordBotForMe.Discordio.Entities;
 using DiscordBotForMe.Logging;
@@ -10,15 +11,16 @@ namespace DiscordBotForMe
 {
     class Program
     {
-        private static async Task Main(string[] args)
+        private static async Task Main()
         {
-            Connection connection = new Connection(new Discord.WebSocket.DiscordSocketClient(), new DiscordLogger(new ConsoleLogger()));
+            IContainer container = ContainerConfig.Configure();
 
-            IDataStorage dataStorage = new JsonStorage();
-            await connection.ConnectAsync(new DiscordBotConfig
+            using (ILifetimeScope scope = container.BeginLifetimeScope())
             {
-                Token = dataStorage.RestoreObject<string>("Config/BotToken")
-            });
+                IApplication app = scope.Resolve<IApplication>();
+
+                await app.Run();
+            }
         }
     }
 }

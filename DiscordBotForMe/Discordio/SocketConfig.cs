@@ -6,7 +6,7 @@ using Discord.WebSocket;
 
 namespace DiscordBotForMe.Discordio
 {
-    public class SocketConfig
+    public class SocketConfig : ISocketConfig
     {
         public DiscordSocketConfig GetDefault()
         {

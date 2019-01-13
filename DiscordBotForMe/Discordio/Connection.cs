@@ -7,7 +7,7 @@ using DiscordBotForMe.Discordio.Entities;
 
 namespace DiscordBotForMe.Discordio
 {
-    class Connection
+    public class Connection : IConnection
     {
         private readonly DiscordSocketClient client;
         private readonly DiscordLogger logger;
@@ -18,7 +18,7 @@ namespace DiscordBotForMe.Discordio
             this.logger = logger;
         }
 
-        public async Task ConnectAsync(DiscordBotConfig config)
+        public async Task ConnectAsync(IDiscordBotConfig config)
         {
             client.Log += logger.Log;
 

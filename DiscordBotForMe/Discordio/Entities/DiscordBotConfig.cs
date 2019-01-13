@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DiscordBotForMe.Discordio.Entities
 {
-    public class DiscordBotConfig
+    public class DiscordBotConfig : IDiscordBotConfig
     {
         public string Token { get; set; }
     }
