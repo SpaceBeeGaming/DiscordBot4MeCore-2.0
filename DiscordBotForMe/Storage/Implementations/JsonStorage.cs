@@ -8,8 +8,7 @@ namespace DiscordBotForMe.Storage.Implementations
     {
         public T RestoreObject<T>(string path)
         {
-            if (string.IsNullOrWhiteSpace(path))
-                throw new System.ArgumentException("Path is null or whitespace!", nameof(path));
+            if (string.IsNullOrWhiteSpace(path)) throw new System.ArgumentException("Path is null or whitespace!", nameof(path));
             string file = $"{path}.json";
             string json = File.ReadAllText(file);
             return JsonConvert.DeserializeObject<T>(json);
@@ -17,10 +16,14 @@ namespace DiscordBotForMe.Storage.Implementations
 
         public void Store(object obj, string path)
         {
-            if (string.IsNullOrWhiteSpace(path))
-                throw new System.ArgumentException("Path is null or whitespace!", nameof(path));
+            if (string.IsNullOrWhiteSpace(path)) throw new System.ArgumentException("Path is null or whitespace!", nameof(path));
             string file = $"{path}.json";
-            Directory.CreateDirectory(Path.GetDirectoryName(file));
+            string directory = Path.GetDirectoryName(path);
+            if (!string.IsNullOrWhiteSpace(directory))
+            {
+                Directory.CreateDirectory(directory);
+
+            }
             string json = JsonConvert.SerializeObject(obj, Formatting.Indented);
             File.WriteAllText(file, json);
         }
