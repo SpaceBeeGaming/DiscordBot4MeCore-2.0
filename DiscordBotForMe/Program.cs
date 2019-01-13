@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DiscordBot4Me2._0
+namespace DiscordBotForMe
 {
     class Program
     {
