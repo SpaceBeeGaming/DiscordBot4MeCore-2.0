@@ -6,8 +6,8 @@ namespace DiscordBotForMeCore.Storage
 {
     public interface IDataStorage
     {
-        void Store(object obj, string path);
+        void Store(object obj, string key);
 
-        T RestoreObject<T>(string path);
+        T RestoreObject<T>(string key);
     }
 }
