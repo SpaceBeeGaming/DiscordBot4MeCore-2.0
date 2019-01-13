@@ -1,0 +1,8 @@
+language: csharp
+mono: none
+dotnet: 2.1.503
+git:
+  quiet: true
+script: 
+  - dotnet build -c Release
+  - dotnet test UnitTests.xUnit/UnitTests.xUnit.csproj
