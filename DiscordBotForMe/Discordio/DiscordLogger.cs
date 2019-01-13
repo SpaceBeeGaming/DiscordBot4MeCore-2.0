@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using Discord;
 using DiscordBotForMe.Logging;
 
-namespace DiscordBotForMe.Discord
+namespace DiscordBotForMe.Discordio
 {
     public class DiscordLogger
     {
@@ -15,9 +16,10 @@ namespace DiscordBotForMe.Discord
             this.logger = logger;
         }
 
-        public void Log(LogMessage logMessage)
+        public Task Log(LogMessage logMessage)
         {
             logger.Log(logMessage.Message);
+            return Task.CompletedTask;
         }
 
 
