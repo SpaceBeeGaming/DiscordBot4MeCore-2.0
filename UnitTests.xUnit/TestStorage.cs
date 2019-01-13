@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
-using DiscordBotForMe.Storage;
-using DiscordBotForMe.Storage.Implementations;
+using DiscordBotForMeCore.Storage;
+using DiscordBotForMeCore.Storage.Implementations;
 using Xunit;
 
 namespace UnitTests.xUnit

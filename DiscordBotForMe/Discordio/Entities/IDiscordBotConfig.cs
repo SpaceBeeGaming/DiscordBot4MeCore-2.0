@@ -1,4 +1,4 @@
-﻿namespace DiscordBotForMe.Discordio.Entities
+﻿namespace DiscordBotForMeCore.Discordio.Entities
 {
     public interface IDiscordBotConfig
     {

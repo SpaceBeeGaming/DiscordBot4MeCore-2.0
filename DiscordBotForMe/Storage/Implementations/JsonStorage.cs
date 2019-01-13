@@ -2,7 +2,7 @@
 
 using Newtonsoft.Json;
 
-namespace DiscordBotForMe.Storage.Implementations
+namespace DiscordBotForMeCore.Storage.Implementations
 {
     public class JsonStorage : IDataStorage
     {

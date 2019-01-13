@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DiscordBotForMe.Logging
+namespace DiscordBotForMeCore.Logging
 {
     public class ConsoleLogger : ILogger
     {

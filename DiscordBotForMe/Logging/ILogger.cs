@@ -1,4 +1,4 @@
-﻿namespace DiscordBotForMe.Logging
+﻿namespace DiscordBotForMeCore.Logging
 {
     public interface ILogger
     {

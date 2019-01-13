@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.271
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiscordBotForMe", "DiscordBotForMe\DiscordBotForMe.csproj", "{D0DA68C6-A09B-4AD1-B40F-D5E0079391A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DiscordBotForMeCore", "DiscordBotForMe\DiscordBotForMeCore.csproj", "{D0DA68C6-A09B-4AD1-B40F-D5E0079391A0}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTests.xUnit", "UnitTests.xUnit\UnitTests.xUnit.csproj", "{0D75257E-8C65-456F-AE3A-61805716C826}"
 EndProject

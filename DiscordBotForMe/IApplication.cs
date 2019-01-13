@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace DiscordBotForMe
+namespace DiscordBotForMeCore
 {
     public interface IApplication
     {

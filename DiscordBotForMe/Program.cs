@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Autofac;
-using DiscordBotForMe.Discordio;
-using DiscordBotForMe.Discordio.Entities;
-using DiscordBotForMe.Logging;
-using DiscordBotForMe.Storage;
-using DiscordBotForMe.Storage.Implementations;
+using DiscordBotForMeCore.Discordio;
+using DiscordBotForMeCore.Discordio.Entities;
+using DiscordBotForMeCore.Logging;
+using DiscordBotForMeCore.Storage;
+using DiscordBotForMeCore.Storage.Implementations;
 
-namespace DiscordBotForMe
+namespace DiscordBotForMeCore
 {
     class Program
     {

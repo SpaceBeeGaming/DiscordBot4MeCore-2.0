@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using Discord;
-using DiscordBotForMe.Logging;
+using DiscordBotForMeCore.Logging;
 
-namespace DiscordBotForMe.Discordio
+namespace DiscordBotForMeCore.Discordio
 {
     public class DiscordLogger
     {

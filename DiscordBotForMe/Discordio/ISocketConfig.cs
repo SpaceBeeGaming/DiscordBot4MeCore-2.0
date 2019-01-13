@@ -1,6 +1,6 @@
 ﻿using Discord.WebSocket;
 
-namespace DiscordBotForMe.Discordio
+namespace DiscordBotForMeCore.Discordio
 {
     public interface ISocketConfig
     {

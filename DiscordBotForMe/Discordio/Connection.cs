@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using Discord.WebSocket;
-using DiscordBotForMe.Discordio.Entities;
+using DiscordBotForMeCore.Discordio.Entities;
 
-namespace DiscordBotForMe.Discordio
+namespace DiscordBotForMeCore.Discordio
 {
     public class Connection : IConnection
     {

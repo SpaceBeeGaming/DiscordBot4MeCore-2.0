@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DiscordBotForMe\DiscordBotForMe.csproj" />
+    <ProjectReference Include="..\DiscordBotForMe\DiscordBotForMeCore.csproj" />
   </ItemGroup>
 
   <ItemGroup>

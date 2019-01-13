@@ -4,7 +4,7 @@ using System.Text;
 using Discord;
 using Discord.WebSocket;
 
-namespace DiscordBotForMe.Discordio
+namespace DiscordBotForMeCore.Discordio
 {
     public class SocketConfig : ISocketConfig
     {

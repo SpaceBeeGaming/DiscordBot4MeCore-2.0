@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using DiscordBotForMe.Logging;
+using DiscordBotForMeCore.Logging;
 using Xunit;
 
 namespace UnitTests.xUnit

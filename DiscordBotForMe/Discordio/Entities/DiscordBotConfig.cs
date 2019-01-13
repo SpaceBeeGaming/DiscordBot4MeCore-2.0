@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DiscordBotForMe.Discordio.Entities
+namespace DiscordBotForMeCore.Discordio.Entities
 {
     public class DiscordBotConfig : IDiscordBotConfig
     {

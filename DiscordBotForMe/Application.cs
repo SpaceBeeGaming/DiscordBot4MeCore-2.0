@@ -1,10 +1,10 @@
 ﻿using System.Threading.Tasks;
 
-using DiscordBotForMe.Discordio;
-using DiscordBotForMe.Discordio.Entities;
-using DiscordBotForMe.Storage;
+using DiscordBotForMeCore.Discordio;
+using DiscordBotForMeCore.Discordio.Entities;
+using DiscordBotForMeCore.Storage;
 
-namespace DiscordBotForMe
+namespace DiscordBotForMeCore
 {
     public class Application : IApplication
     {

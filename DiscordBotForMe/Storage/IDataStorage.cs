@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DiscordBotForMe.Storage
+namespace DiscordBotForMeCore.Storage
 {
     public interface IDataStorage
     {

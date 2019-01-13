@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
-using DiscordBotForMe.Discordio.Entities;
+using DiscordBotForMeCore.Discordio.Entities;
 
-namespace DiscordBotForMe.Discordio
+namespace DiscordBotForMeCore.Discordio
 {
     public interface IConnection
     {
