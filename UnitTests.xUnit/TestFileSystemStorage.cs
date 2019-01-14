@@ -105,7 +105,7 @@ namespace UnitTests.xUnit
 
             MockFileSystem fileSystem = new MockFileSystem(new Dictionary<string, MockFileData>
             {
-                {@"c:/"+key+".json", new MockFileData(GetComparisonElements(toRestore).jsonString)}
+                {key+".json", new MockFileData(GetComparisonElements(toRestore).jsonString)}
             });
 
             IDataStorage dataStorage = new JsonStorage(fileSystem);
