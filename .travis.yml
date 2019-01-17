@@ -5,6 +5,5 @@ dist: xenial
 git:
   quiet: true
 script: 
-  - dotnet --version
   - dotnet build -c Release
   - dotnet test UnitTests.xUnit/UnitTests.xUnit.csproj

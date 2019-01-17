@@ -3,7 +3,7 @@ skip_tags: true
 skip_commits:
   files:
     - '**/*.md'
-image: Visual Studio 2017 Preview
+image: Visual Studio 2017
 dotnet_csproj:
   patch: true
   file: '**\*.csproj'
@@ -18,8 +18,6 @@ before_build:
   nuget install opencover
 
   choco install codecov
-
-  dotnet --version
 build_script:
 - ps: dotnet build -c Release
 test_script:
