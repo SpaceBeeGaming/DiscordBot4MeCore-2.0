@@ -18,6 +18,8 @@ before_build:
   nuget install opencover
 
   choco install codecov
+
+  dotnet --version
 build_script:
 - ps: dotnet build -c Release
 test_script:
