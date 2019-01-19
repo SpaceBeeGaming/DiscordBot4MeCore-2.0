@@ -13,10 +13,16 @@ namespace DiscordBotForMeCore.Storage.Implementations
 
         public JsonStorage(IFileSystem fileSystem) => this.fileSystem = fileSystem;
 
+        public bool KeyExists(string key)
+        {
+            string file = ValidPath(key);
+            return fileSystem.File.Exists(file) ? true : false;
+        }
+
         public T RestoreObject<T>(string key)
         {
             string file = ValidPath(key);
-            if (!fileSystem.File.Exists(file)) throw new ArgumentException("Key must point to a File, without extention.");
+            if (!fileSystem.File.Exists(file)) throw new ArgumentException($"Key '{key}' pointing to file '{file}', doesn't exist.");
             string json = fileSystem.File.ReadAllText(file);
             return JsonConvert.DeserializeObject<T>(json);
         }
@@ -35,12 +41,12 @@ namespace DiscordBotForMeCore.Storage.Implementations
             fileSystem.File.WriteAllText(file, json);
         }
 
-        private string ValidPath(string path)
+        private string ValidPath(string key)
         {
-            if (string.IsNullOrWhiteSpace(path)) throw new ArgumentException("Path is null or whitespace!", nameof(path));
-            if (path.Contains(".json")) throw new ArgumentException("Key must point to a File, without extention.");
+            if (string.IsNullOrWhiteSpace(key)) throw new ArgumentException("Key is null or whitespace!", nameof(key));
+            if (key.Contains(".json")) throw new ArgumentException($"Key '{key}' must point to a File, without extention.");
 
-            return $"{path}.json";
+            return $"{key}.json";
         }
     }
 }

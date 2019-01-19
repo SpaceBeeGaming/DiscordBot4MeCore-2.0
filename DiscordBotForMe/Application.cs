@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 
 using DiscordBotForMeCore.Discordio;
 using DiscordBotForMeCore.Discordio.Entities;
@@ -19,11 +20,16 @@ namespace DiscordBotForMeCore
             this.connection = connection;
             this.dataStorage = dataStorage;
             this.config = config;
-            config.Token = dataStorage.RestoreObject<string>("Config/BotToken");
         }
 
         public async Task Run()
         {
+            if (!dataStorage.KeyExists("Config/BotToken"))
+            {
+                Console.WriteLine("Bot token missing form 'Config/BotToken.json'");
+                return;
+            }
+            config.Token = dataStorage.RestoreObject<string>("Config/BotToken");
             await connection.ConnectAsync(config);
         }
     }
