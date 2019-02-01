@@ -2,7 +2,6 @@ language: csharp
 mono: none
 dotnet: 2.2.102
 dist: xenial
-branch = master
 git:
   quiet: true
 script: 
