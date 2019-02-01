@@ -105,7 +105,7 @@ namespace UnitTests.xUnit
 
             MockFileSystem fileSystem = new MockFileSystem(new Dictionary<string, MockFileData>
             {
-                {key+".json", new MockFileData(GetComparisonElements(toRestore).jsonString)}
+                {$"{key}.json", new MockFileData(GetComparisonElements(toRestore).jsonString)}
             });
 
             IDataStorage dataStorage = new JsonStorage(fileSystem);
@@ -119,6 +119,29 @@ namespace UnitTests.xUnit
             string jsonString = JsonConvert.SerializeObject(obj);
             object output = JsonConvert.DeserializeObject<object>(jsonString);
             return (jsonString, output);
+        }
+
+        [Fact]
+        public void KeyExists_Should_true()
+        {
+            string key = "test";
+
+            MockFileSystem fileSystem = new MockFileSystem(new Dictionary<string, MockFileData>
+            {
+                { $"{key}.json", new MockFileData("")}
+        });
+            IDataStorage dataStorage = new JsonStorage(fileSystem);
+
+            Assert.True(dataStorage.KeyExists(key));
+        }
+
+        [Fact]
+        public void KeyExists_Should_false()
+        {
+            string key = "sdfs";
+            MockFileSystem fileSystem = new MockFileSystem();
+            IDataStorage dataStorage = new JsonStorage(fileSystem);
+            Assert.False(dataStorage.KeyExists(key));
         }
     }
 }
